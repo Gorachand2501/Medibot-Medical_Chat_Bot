@@ -88,6 +88,11 @@ streamlit run app.py
     └── secrets.toml
 ```
 
+![App Screenshot](Chat-Images/Medibot-op1.png)
+![App Screenshot](Chat-Images/Medibot-op2.png)
+![App Screenshot](Chat-Images/Medibot-op3.png)
+
+
 ## ⚠️ Disclaimer
 
 This project is for **educational purposes only**.  
