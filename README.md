@@ -47,7 +47,7 @@ User Query → FAISS Search (Vector Store) → Relevant Document Chunks → Cust
 
 ### Step 1: Clone the Repository & Install Dependencies
 ```bash
-git clone <repository-url>
+git clone <[repository-url](https://github.com/Gorachand2501/Medibot-Medical_Chat_Bot)>
 cd medibot
 pip install -r requirements.txt
 ```
