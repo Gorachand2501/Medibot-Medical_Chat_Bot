@@ -40,4 +40,57 @@ To create a chatbot that provides **accurate, context-aware answers** to medical
 ---
 
 ## 🧠 Model Architecture (RAG)
+```plaintext
+User Query → FAISS Search (Vector Store) → Relevant Document Chunks → Custom Prompt (LangChain) + LLM → Generated Answer
+```
+## 🚀 How to Run
+
+### Step 1: Clone the Repository & Install Dependencies
+```bash
+git clone <repository-url>
+cd medibot
+pip install -r requirements.txt
+```
+
+### Step 2: Set Up Environment Variables
+Create a file named `.streamlit/secrets.toml` to store your Hugging Face API token.
+
+```toml
+# .streamlit/secrets.toml
+HF_TOKEN = "your_huggingface_api_token_here"
+
+# Optional: Specify a different LLM model
+HUGGINGFACE_REPO_ID = "mistralai/Mistral-7B-Instruct-v0.3"
+```
+### Step 3: Ingest Documents
+Run the `ingest.py` script to process your PDF files and create the vector database.
+
+```bash
+python ingest.py
+```
+### Step 4: Launch the App
+Start the Streamlit application.
+
+```bash
+streamlit run app.py
+```
+
+## 📂 Project Structure
+
+```plaintext
+├── app.py             # Streamlit front-end for the chatbot
+├── ingest.py          # Script for document loading and vector store creation
+├── utils.py           # Utility functions for LLM, prompts, and QA chain
+├── requirements.txt   # Python dependencies
+├── data/              # Directory to store your PDF files
+├── vectorstore/       # Directory for the FAISS database (generated after ingestion)
+└── .streamlit/        # Directory for secrets management
+    └── secrets.toml
+```
+
+## ⚠️ Disclaimer
+
+This project is for **educational purposes only**.  
+MediBot is **not a substitute for professional medical advice**.  
+Always consult a **qualified healthcare provider** for medical concerns.
 
